@@ -1,0 +1,622 @@
+/* CSS Responsive  */
+@import url('../_css/responsive.css');
+
+/* Font Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+/* LOGO - H1 */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --red-color: #FF000A;
+    --dark-gray: #22242b;
+    --light-gray: #45484e;
+    --yellow-orange: #ffba00;
+    --dark-blue: #0b0e25;
+    --bg-color: rgb(76, 76, 76, .8);    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+
+    color: var(--black);
+}
+
+html { font-size: 62.5%; }
+
+input[type=checkbox] { display: none; }
+
+.row {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.active {
+    border-bottom: 2px solid var(--red-color);
+    cursor: default;
+}
+
+section#bg-img {
+    height: 85rem;
+    background: url('../_img/kitchen-desktop.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+section#bg-img header {
+    background-color: var(--bg-color);
+}
+
+header {
+    padding: 1.2rem 0;
+}
+
+div#logo {    
+    align-self: center;    
+}
+
+div#logo h1, div#logo h2 {    
+    color: var(--white);    
+}
+
+div#logo h1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 2.8rem;
+    letter-spacing: .4rem;
+}
+
+div#logo h2 {
+    font-size: 1.6rem;
+    letter-spacing: .2rem;
+    font-weight: normal;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    line-height: 8rem;
+    margin: 0 1.2rem;
+}
+
+ul a {
+    color: var(--white);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: .5rem .1rem;
+}
+
+ul li a:hover {
+    border-bottom: 2px solid var(--red-color);
+}
+
+ul label {
+    cursor: pointer;
+}
+
+ul .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+    color: var(--white);
+    vertical-align: middle;
+    margin-bottom: .4rem;
+    font-size: 2.8rem;
+}
+
+
+
+
+
+ul ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 20rem;
+    padding: 1.2rem;
+    margin-top: 3.4rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+} 
+
+ul li:hover ul {
+    margin-top: initial;
+    visibility: visible;
+    opacity: 1;
+}
+
+ul ul::before {
+    position: absolute;
+    content: '';
+    top: -.8rem;
+    left: 1.4rem;
+    border-left: .8rem solid transparent;
+    border-right: .8rem solid transparent;
+    border-bottom: .8rem solid var(--white);    
+}
+
+ul ul li {
+    margin: 0;
+    line-height: 3rem;
+}
+
+ul ul a {
+    color: var(--black);
+    text-transform: initial;
+}
+
+ul ul a:hover {
+    border: none;
+    color: var(--red-color);
+}
+
+/* Desabilitar Ícones */
+div#logo span {
+    display: none;
+}
+
+
+
+
+/* SECTION INTRO */
+.center {
+    display: flex;
+    justify-content: center;
+
+    /* border: 1px solid red; */
+}
+
+.content {
+    width: 90%;
+    max-width: 120rem;
+    margin: 8rem auto 0;
+
+    /* border: 1px solid blue; */
+}
+
+.content h1 {
+    font-size: 6rem;
+    text-align: center;
+}
+
+div.col {
+    width: 50%;
+    padding: 0 1.2rem;
+    margin-top: 8rem;
+
+    /* border: 1px solid red; */
+}
+
+div.col h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+div.col h3 {
+    font-size: 2.8rem;
+    margin: 2rem 0 1rem;
+}
+
+div.col h4 {
+    font-size: 1.6rem;
+    margin: 0 0 2rem;
+}
+
+div.col p {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    text-align: justify;
+}
+
+div.col img {
+    width: 100%;
+}
+
+
+
+
+/* SECTION NEW */
+section#new span {
+    position: absolute;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 1.4rem 2.4rem;
+    color: var(--white);
+    background-color: var(--red-color);
+}
+
+section#new .col:nth-child(2) span {
+    background-color: var(--yellow-orange);
+}
+
+
+
+
+/* SECTION INCOME */
+section#income {
+    padding-top: 8rem;
+}
+
+section#income .row {
+    background-color: var(--dark-gray);
+}
+
+section#income .col {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+section#income h1, section#income p {
+    color: var(--white)
+}
+
+section#income form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+}
+
+section#income input {
+    height: 6rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.6rem;
+    font-style: italic;
+    border: none;
+    outline: none;
+}
+
+section#income input[type=text] {
+    width: 35%;
+}
+
+section#income input[type=submit] {
+    width: 20%;
+    font-style: initial;
+    cursor: pointer;
+    background-color: var(--red-color);
+    color: var(--white)
+}
+
+
+
+
+/* SECTION SUCCESS */
+section#success .col:nth-child(1) {
+    width: 70%;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    background-color: var(--dark-gray);
+}
+
+footer .col:first-of-type {
+    width: 34%;
+    border-right: 2px solid var(--light-gray);
+}
+
+footer .col {
+    width: 22%;
+}
+
+footer #logo h1 {
+    text-align: left;
+    font-family: 'Poiret One', cursive;
+    letter-spacing: .4rem;
+    font-size: 3.8rem;
+}
+
+footer #logo h2 {
+    letter-spacing: .2rem;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+footer .col h2 {
+    letter-spacing: .2rem;
+    font-size: 1.8rem;
+}
+
+footer h1, footer h2, footer p, footer a {
+    color: var(--white);    
+}
+
+footer .col a {
+    display: block;
+    line-height: 4.5rem;
+    font-size: 1.6rem;
+    opacity: .7;
+}
+
+footer .col a#btn {
+    width: 70%;
+    text-align: center;
+    margin: 3rem 0 0;
+    padding-top: 1rem;
+    opacity: 1;
+    background-color: var(--red-color);
+}
+
+/* COPYRIGHT */
+footer #copyright p {
+    padding: 50px 0;
+    text-align: center;
+    font-size: 1.6rem;
+    opacity: .7;
+}
+
+footer #copyright a {
+    color: var(--yellow-orange);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive ============================== */
+@media (max-width: 768px) {
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .active {
+        color: var(--red-color);
+        background-color: var(--dark-blue);
+        border: none; 
+        cursor: default;       
+    }
+
+    section#bg-img {
+        height: 45rem;
+        background: url('../_img/kitchen-mobile.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+  
+    div#logo {
+        width: 100%;
+        align-self: flex-start; 
+        padding: 1rem 2.5rem 2rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div#logo span {
+        color: var(--white);
+        font-size: 3.2rem;
+        cursor: pointer;
+    }
+    
+    /* Habilitar Ícone Open */
+    div#logo span#open {
+        display: initial;
+    }
+
+    input#nav:checked + header nav {
+        display: initial;
+    }
+
+    input#nav:checked + header span#open {
+        display: none;
+    }
+
+    /* Habilitar Ícone Close */
+    input#nav:checked + header span#close {
+        display: initial;
+    }
+    
+    nav {
+        background-color: var(--dark-gray);
+        margin: 0 .8rem; 
+        display: none;
+    }
+    
+    nav ul {
+        flex-direction: column;  
+    }
+    
+    ul li {
+        line-height: 4rem;
+        margin: 0;
+        border-bottom: 1px solid var(--black);
+    }
+
+    ul li:hover {
+        background-color: var(--dark-blue);
+    }
+    
+    ul a {
+        display: block;
+        padding: 0 2rem;
+    }
+    
+    ul li a:hover {
+        border: none;
+    }
+    
+    /* Desabilitar Ícones */
+    ul .material-symbols-outlined {
+        transform: rotate(-90deg);
+    }
+
+    input#lancamentos:checked + li span {
+        transform: rotate(0);
+    }
+    
+        
+    
+    
+    ul ul {
+        position: initial;
+        background-color: var(--dark-gray);
+        width: auto;
+        padding: 0 3rem;
+        margin: 0;
+        visibility: visible;
+        opacity: 1;
+        display: none;
+    } 
+
+    input#lancamentos:checked + li ul {
+        display: block;
+    }
+    
+    ul ul::before {
+        position: initial;
+        border: none;
+    }
+    
+    ul ul li:last-child {
+        border: none;
+    }
+
+    ul ul li:hover {
+        background: none;
+    }
+    
+    ul ul a {
+        color: var(--white);
+    }
+    
+
+
+
+    /* SECTION INTRO */
+    .center {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#intro .center:first-of-type {
+        flex-direction: column-reverse;
+    }
+
+    .content {
+        max-width: 55rem;
+    }
+
+    .content h1 {
+        font-size: 4.5rem;
+        text-align: center;
+    }
+
+    div.col {
+        width: initial;
+        margin: 1rem 0;
+    }
+
+    div.col h2 {
+        font-size: 3rem;
+    }
+    
+    div.col p {
+        padding-bottom: 4rem;
+    }
+
+
+
+
+    /* SECTION INCOME */
+    section#income form {
+        flex-direction: column;
+    }
+
+    section#income input[type=text] {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    section#income input[type=submit] {
+        width: 40%;
+        align-self: center;
+    }
+
+
+
+
+    /* SECTION SUCCESS */
+    section#success .col:nth-child(1) {
+        width: 100%;
+    }
+
+    section#success .center {
+        flex-direction: column-reverse;
+    }
+    
+
+
+
+    /* FOOTER */
+    footer .center {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    footer .col:first-of-type {
+        width: 100%;
+        border: none;
+    }
+
+    footer .col {
+        margin: 3rem 1rem;
+        width: 28%;
+    }
+
+    footer #logo {
+        padding-left: 0;
+    }
+
+    footer #logo h1 {
+        text-align: left;
+    }
+
+    footer #logo h2 {
+        margin: 0;
+    }
+
+    footer .col h2 {
+        font-size: 1.6rem;
+    }
+
+    footer .col a {
+        font-size: 1.4rem
+    }
+
+    footer .col a#btn {
+        margin: 0;
+        padding: 1rem 0;
+        width: 50%;
+        opacity: 1;
+    }
+
+}
